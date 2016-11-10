@@ -1,5 +1,29 @@
 apply plugin: 'com.android.library'
 
+ext {
+    bintrayRepo = 'multiple-media-picker'
+    bintrayName = 'multiple-media-picker'
+
+    publishedGroupId = 'com.erikagtierrez.multiple_media_picker'
+    libraryName = 'multiple-media-picker'
+    artifact = 'multiple-media-picker'
+
+    libraryDescription = 'An android library to pick multiple images and/or videos from bulit-in gallery.'
+
+    siteUrl = 'https://github.com/erikagtierrez/multiple-media-picker'
+    gitUrl = 'https://github.com/erikagtierrez/multiple-media-picker.git'
+
+    libraryVersion = '1.0.0'
+
+    developerId = 'eikagtierrez'
+    developerName = 'Erika Gutierrez'
+    developerEmail = 'erikagutierrez01@gmail.com'
+
+    licenseName = 'The Apache Software License, Version 2.0'
+    licenseUrl = 'http://www.apache.org/licenses/LICENSE-2.0.txt'
+    allLicenses = ["Apache-2.0"]
+}
+
 android {
     compileSdkVersion 24
     buildToolsVersion "24.0.1"
@@ -27,3 +51,6 @@ dependencies {
     compile 'com.squareup.picasso:picasso:2.5.2'
     compile 'com.github.bumptech.glide:glide:3.7.0'
 }
+
+apply from: 'https://raw.githubusercontent.com/nuuneoi/JCenter/master/installv1.gradle'
+apply from: 'https://raw.githubusercontent.com/nuuneoi/JCenter/master/bintrayv1.gradle'
