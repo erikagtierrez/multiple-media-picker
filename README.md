@@ -1,6 +1,7 @@
 # Multiple-media-picker :boom: :star2:
 ### An android library to pick multiple images and/or videos from built-in gallery. This library is encouraged to use as little memory as possible. 
-#### Feel free to ask(or request) me anything about it, just create an issue!
+Feel free to ask(or request) me anything about it, just create an issue!
+
 ![](https://raw.githubusercontent.com/erikagtierrez/multiple-media-picker/master/cover.jpg)
 
 # Usage
