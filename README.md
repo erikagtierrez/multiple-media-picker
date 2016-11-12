@@ -6,7 +6,7 @@
 #### Feel free to ask(or request) me anything about it, just create an issue!
 
 # Usage
-Include easily in your project adding the decendency to your build.gradle file.  
+Include easily in your project adding the dependency to your build.gradle file.  
 
 ```gradle
 dependencies {
