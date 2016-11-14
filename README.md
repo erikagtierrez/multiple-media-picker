@@ -3,7 +3,7 @@
 
 [![Join the chat at https://gitter.im/Multiple-Media-Picker/Lobby](https://badges.gitter.im/Multiple-Media-Picker/Lobby.svg)](https://gitter.im/Multiple-Media-Picker/Lobby?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 
-![](https://raw.githubusercontent.com/erikagtierrez/multiple-media-picker/master/cover.jpg)
+![](https://img.shields.io/badge/license-APACHE%202-ff69b4.svg) ![](https://raw.githubusercontent.com/erikagtierrez/multiple-media-picker/master/cover.jpg)
 
 #### Feel free to ask(or request) me anything about it, just create an issue!
 
