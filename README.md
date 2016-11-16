@@ -51,7 +51,8 @@ The colors will be inherited from the class it was called.
 
 #License
 
-```Copyright 2016 Erika Gutierrez
+```
+Copyright 2016 Erika Gutierrez
 
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.
