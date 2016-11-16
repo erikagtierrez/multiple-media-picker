@@ -5,7 +5,7 @@
 
 ![](https://raw.githubusercontent.com/erikagtierrez/multiple-media-picker/master/cover.jpg)
 
-#### Feel free to ask(or request) me anything about it, just create an issue!
+#### Feel free to ask(or request) me anything about it, just create an issue or join the gitter chat!
 
 # Usage
 Include easily in your project adding the dependency to your build.gradle file.  
