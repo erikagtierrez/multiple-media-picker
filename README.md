@@ -1,7 +1,7 @@
 # Multiple Media Picker :boom: :star2:
 ### An android library to pick multiple images and/or videos from built-in gallery. This library is encouraged to use as little memory as possible. 
 
-[![Join the chat at https://gitter.im/Multiple-Media-Picker/Lobby](https://badges.gitter.im/Multiple-Media-Picker/Lobby.svg)](https://gitter.im/Multiple-Media-Picker/Lobby?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge) ![](https://img.shields.io/badge/license-APACHE%202-ff69b4.svg) 
+[![Join the chat at https://gitter.im/Multiple-Media-Picker/Lobby](https://badges.gitter.im/Multiple-Media-Picker/Lobby.svg)](https://gitter.im/Multiple-Media-Picker/Lobby?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge) ![](https://img.shields.io/badge/license-APACHE%202-ff69b4.svg) ![](	https://img.shields.io/badge/bintray-v.1.0.1-673AB7.svg)
 
 ![](https://raw.githubusercontent.com/erikagtierrez/multiple-media-picker/master/cover.jpg)
 
@@ -21,6 +21,13 @@ In the activity from where you want to call the library, declare
 ```java
     static final int OPEN_MEDIA_PICKER = 1;  // Request code
 ```
+
+and request permissions to read external storage
+
+```java
+    Manifest.permission.READ_EXTERNAL_STORAGE
+```
+
 Create the intent
 
 ```java
