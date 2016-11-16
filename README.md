@@ -1,4 +1,4 @@
-# Multiple Media Picker
+# Multiple Media Picker :boom: :star2:
 ### An android library to pick multiple images and/or videos from built-in gallery. This library is encouraged to use as little memory as possible. 
 
 [![Join the chat at https://gitter.im/Multiple-Media-Picker/Lobby](https://badges.gitter.im/Multiple-Media-Picker/Lobby.svg)](https://gitter.im/Multiple-Media-Picker/Lobby?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge) ![](https://img.shields.io/badge/license-APACHE%202-ff69b4.svg) 
@@ -52,17 +52,17 @@ The colors will be inherited from the class it was called.
 # License
 
 ```
-    Copyright 2016 Erika Gutierrez
+Copyright 2016 Erika Gutierrez
 
-    Licensed under the Apache License, Version 2.0 (the "License");
-    you may not use this file except in compliance with the License.
-    You may obtain a copy of the License at
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
 
-    http://www.apache.org/licenses/LICENSE-2.0
+http://www.apache.org/licenses/LICENSE-2.0
 
-    Unless required by applicable law or agreed to in writing, software
-    distributed under the License is distributed on an "AS IS" BASIS,
-    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-    See the License for the specific language governing permissions and
-    limitations under the License.
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
 ```
