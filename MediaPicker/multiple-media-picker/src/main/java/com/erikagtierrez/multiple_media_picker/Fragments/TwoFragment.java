@@ -79,6 +79,7 @@ public class TwoFragment extends Fragment{
     }
 
     public void getVideos(String bucket){
+        selected.clear();
         Cursor cursor = getContext().getContentResolver()
                 .query(MediaStore.Video.Media.EXTERNAL_CONTENT_URI, projection2,
                         MediaStore.Video.Media.BUCKET_DISPLAY_NAME+" =?",new String[]{bucket},MediaStore.Video.Media.DATE_ADDED);
