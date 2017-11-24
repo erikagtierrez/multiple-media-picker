@@ -23,9 +23,9 @@ import java.util.List;
 public class OpenGallery extends AppCompatActivity {
     private RecyclerView recyclerView;
     private MediaAdapter mAdapter;
-    private List<String> mediaList=new ArrayList<>();
-    public static List<Boolean> selected=new ArrayList<>();
-    public static ArrayList<String> imagesSelected=new ArrayList<>();
+    private List<String> mediaList = new ArrayList<>();
+    public static List<Boolean> selected = new ArrayList<>();
+    public static ArrayList<String> imagesSelected = new ArrayList<>();
     public static String parent;
 
     @Override
@@ -45,7 +45,7 @@ public class OpenGallery extends AppCompatActivity {
         });
         toolbar.setNavigationIcon(R.drawable.arrow_back);
         setTitle(Gallery.title);
-        if(imagesSelected.size()>0){
+        if (imagesSelected.size() > 0) {
             setTitle(String.valueOf(imagesSelected.size()));
         }
         toolbar.setNavigationOnClickListener(new View.OnClickListener() {
@@ -55,13 +55,13 @@ public class OpenGallery extends AppCompatActivity {
             }
         });
         recyclerView = (RecyclerView) findViewById(R.id.recycler_view);
-        parent=getIntent().getExtras().getString("FROM");
+        parent = getIntent().getExtras().getString("FROM");
         mediaList.clear();
         selected.clear();
-        if(parent.equals("Images")){
+        if (parent.equals("Images")) {
             mediaList.addAll(OneFragment.imagesList);
             selected.addAll(OneFragment.selected);
-        }else{
+        } else {
             mediaList.addAll(TwoFragment.videosList);
             selected.addAll(TwoFragment.selected);
         }
@@ -70,34 +70,36 @@ public class OpenGallery extends AppCompatActivity {
 
 
     private void populateRecyclerView() {
-        for(int i=0;i<selected.size();i++){
-            if(imagesSelected.contains(mediaList.get(i))){
-                selected.set(i,true);
-            }else {
-                selected.set(i,false);
+        for (int i = 0; i < selected.size(); i++) {
+            if (imagesSelected.contains(mediaList.get(i))) {
+                selected.set(i, true);
+            } else {
+                selected.set(i, false);
             }
         }
-        mAdapter = new MediaAdapter(mediaList,selected,getApplicationContext());
-        RecyclerView.LayoutManager mLayoutManager = new GridLayoutManager(getApplicationContext(),3);
+        mAdapter = new MediaAdapter(mediaList, selected, getApplicationContext());
+        RecyclerView.LayoutManager mLayoutManager = new GridLayoutManager(getApplicationContext(), 3);
         recyclerView.setLayoutManager(mLayoutManager);
         recyclerView.getItemAnimator().setChangeDuration(0);
         recyclerView.setAdapter(mAdapter);
         recyclerView.addOnItemTouchListener(new RecyclerTouchListener(this, recyclerView, new ClickListener() {
             @Override
             public void onClick(View view, int position) {
-                if(!selected.get(position).equals(true)){
+                if (!selected.get(position).equals(true) && imagesSelected.size() < Gallery.maxSelection) {
                     imagesSelected.add(mediaList.get(position));
-                }else {
-                    if(imagesSelected.indexOf(mediaList.get(position))!= -1) {
+                    selected.set(position, !selected.get(position));
+                    mAdapter.notifyItemChanged(position);
+                } else if (selected.get(position).equals(true)) {
+                    if (imagesSelected.indexOf(mediaList.get(position)) != -1) {
                         imagesSelected.remove(imagesSelected.indexOf(mediaList.get(position)));
+                        selected.set(position, !selected.get(position));
+                        mAdapter.notifyItemChanged(position);
                     }
                 }
-                Gallery.selectionTitle=imagesSelected.size();
-                selected.set(position,!selected.get(position));
-                mAdapter.notifyItemChanged(position);
-                if(imagesSelected.size()!=0){
+                Gallery.selectionTitle = imagesSelected.size();
+                if (imagesSelected.size() != 0) {
                     setTitle(String.valueOf(imagesSelected.size()));
-                }else{
+                } else {
                     setTitle(Gallery.title);
                 }
             }
@@ -106,11 +108,13 @@ public class OpenGallery extends AppCompatActivity {
             public void onLongClick(View view, int position) {
 
             }
+
         }));
     }
 
     public interface ClickListener {
         void onClick(View view, int position);
+
         void onLongClick(View view, int position);
     }
 

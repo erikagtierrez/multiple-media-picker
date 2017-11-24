@@ -29,6 +29,8 @@ public class Gallery extends AppCompatActivity {
     private ViewPager viewPager;
     public static int selectionTitle;
     public static String title;
+    public static int maxSelection;
+    public static int mode;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -56,6 +58,9 @@ public class Gallery extends AppCompatActivity {
         });
 
         title=getIntent().getExtras().getString("title");
+        maxSelection=getIntent().getExtras().getInt("maxSelection");
+        if (maxSelection==0) maxSelection = Integer.MAX_VALUE;
+        mode=getIntent().getExtras().getInt("mode");
         setTitle(title);
         selectionTitle=0;
 
@@ -80,7 +85,10 @@ public class Gallery extends AppCompatActivity {
     //This method set up the tab view for images and videos
     private void setupViewPager(ViewPager viewPager) {
         ViewPagerAdapter adapter = new ViewPagerAdapter(getSupportFragmentManager());
-        adapter.addFragment(new OneFragment(), "Images");
+        if(mode==1 || mode==2) {
+            adapter.addFragment(new OneFragment(), "Images");
+        }
+        if(mode==1||mode==3)
         adapter.addFragment(new TwoFragment(), "Videos");
         viewPager.setAdapter(adapter);
     }

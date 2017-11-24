@@ -79,6 +79,8 @@ public class Main extends AppCompatActivity {
     public void openGallery(View view) {
         Intent intent= new Intent(this, Gallery.class);
         intent.putExtra("title","Select media");
+        intent.putExtra("mode",1);
+        intent.putExtra("maxSelection",3);
         startActivityForResult(intent,OPEN_MEDIA_PICKER);
     }
 }
