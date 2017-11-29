@@ -1,18 +1,18 @@
 # Multiple Media Picker :boom: :star2:
 ### An android library to pick multiple images and/or videos from built-in gallery. This library is encouraged to use as little memory as possible. 
 
-[![Join the chat at https://gitter.im/Multiple-Media-Picker/Lobby](https://badges.gitter.im/Multiple-Media-Picker/Lobby.svg)](https://gitter.im/Multiple-Media-Picker/Lobby?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge) ![](https://img.shields.io/badge/license-APACHE%202-ff69b4.svg) ![](	https://img.shields.io/badge/bintray-v.1.0.2-673AB7.svg)
+![](https://img.shields.io/badge/license-APACHE%202-ff69b4.svg) ![](	https://img.shields.io/badge/bintray-v.1.0.3-673AB7.svg)
 
 ![](https://raw.githubusercontent.com/erikagtierrez/multiple-media-picker/master/cover.jpg)
 
-#### Feel free to ask(or request) me anything about it, just create an issue or join the gitter chat!
+#### Feel free to ask(or request) me anything about it, just create an issue!
 
 # Usage
 Include easily in your project adding the dependency to your build.gradle file.  
 
 ```gradle
 dependencies {
-  compile 'com.erikagtierrez.multiple_media_picker:multiple-media-picker:1.0.2'
+  compile 'com.erikagtierrez.multiple_media_picker:multiple-media-picker:1.0.3'
 }
 ```
 # Getting started
@@ -32,8 +32,11 @@ Create the intent
 
 ```java
     Intent intent= new Intent(this, Gallery.class);
-    //Set the title
+    // Set the title
     intent.putExtra("title","Select media");
+    // Mode 1 for both images and videos selection, 2 for images only and 3 for videos!
+    intent.putExtra("mode",1); 
+    intent.putExtra("maxSelection",3); // Optional
     startActivityForResult(intent,OPEN_MEDIA_PICKER);
 ```
 
@@ -54,7 +57,14 @@ and override onActivityResult
 
 ## Custom styles
 
-The colors will be inherited from the class it was called.
+The primary colors will be inherited from the project it was called. But you can customize a little more by adding to your colors.xml
+
+```xml
+ <color name="titleTextColor">#000000</color>
+ <color name="titleTabColor">#000000</color>
+ <color name="titleSelectedTabColor">#E040FB</color>
+```
+
 
 # License
 
