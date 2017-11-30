@@ -57,14 +57,26 @@ and override onActivityResult
 
 ## Custom styles
 
-The primary colors will be inherited from the project it was called. But you can customize a little more by adding to your colors.xml
+The primary colors will be inherited from the project it was called. But you can customize a little more by adding to your `colors.xml`
+
+Title and back button color
+```xml
+ <color name="titleTextColor">#000000</color>  
+```
+Unselected image/video tab title
+```xml
+ <color name="titleTabColor">#000000</color>   
+```
+Selected image/video tab title!
+```xml
+<color name="titleSelectedTabColor">#E040FB</color>
+``` 
+
+Make sure to override the titleTextColor inside your theme in `styles.xml`
 
 ```xml
- <color name="titleTextColor">#000000</color>
- <color name="titleTabColor">#000000</color>
- <color name="titleSelectedTabColor">#E040FB</color>
+<item name="titleTextColor">@color/titleTextColor</item>
 ```
-
 
 # License
 
