@@ -32,6 +32,9 @@ android {
         targetSdkVersion 27
         versionCode 1
         versionName "1.0.2"
+
+        // required to use vector drawables before API 21.
+        vectorDrawables.useSupportLibrary = true
     }
     buildTypes {
         release {
@@ -46,6 +49,7 @@ dependencies {
     implementation 'com.android.support:appcompat-v7:27.1.1'
     implementation 'com.android.support:design:27.1.1'
     implementation 'com.android.support:support-v4:27.1.1'
+    implementation 'com.android.support:appcompat-v7:27.1.1'
     implementation 'com.squareup.picasso:picasso:2.5.2'
     implementation 'com.github.bumptech.glide:glide:3.7.0'
 }
