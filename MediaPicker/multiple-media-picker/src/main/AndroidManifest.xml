@@ -13,7 +13,8 @@
         <activity
             android:name="com.erikagtierrez.multiple_media_picker.Gallery"
             android:theme="@style/AppTheme.NoActionBar"/>
-        <activity android:name="com.erikagtierrez.multiple_media_picker.OpenGallery"/>
+        <activity android:name="com.erikagtierrez.multiple_media_picker.OpenGallery"
+            android:theme="@style/AppTheme.NoActionBar"/>
     </application>
 
 </manifest>
