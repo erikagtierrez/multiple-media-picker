@@ -1,7 +1,7 @@
 # Multiple Media Picker :boom: :star2:
 ### An android library to pick multiple images and/or videos from built-in gallery. This library is encouraged to use as little memory as possible. 
 
-![](https://img.shields.io/badge/license-APACHE%202-ff69b4.svg) ![](	https://img.shields.io/badge/bintray-v.1.0.3-673AB7.svg)
+![](https://img.shields.io/badge/license-APACHE%202-ff69b4.svg) ![](	https://img.shields.io/badge/bintray-v.1.0.5-673AB7.svg)
 
 ![](https://raw.githubusercontent.com/erikagtierrez/multiple-media-picker/master/cover.jpg)
 
@@ -12,7 +12,7 @@ Include easily in your project adding the dependency to your build.gradle file.
 
 ```gradle
 dependencies {
-  compile 'com.erikagtierrez.multiple_media_picker:multiple-media-picker:1.0.3'
+  compile 'com.erikagtierrez.multiple_media_picker:multiple-media-picker:1.0.5'
 }
 ```
 # Getting started
