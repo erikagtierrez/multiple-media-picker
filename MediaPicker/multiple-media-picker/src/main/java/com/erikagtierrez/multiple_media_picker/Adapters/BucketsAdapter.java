@@ -9,8 +9,10 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.erikagtierrez.multiple_media_picker.R;
+
 import com.bumptech.glide.Glide;
+import com.bumptech.glide.request.RequestOptions;
+import com.erikagtierrez.multiple_media_picker.R;
 
 import java.util.List;
 
@@ -46,7 +48,7 @@ public class BucketsAdapter extends RecyclerView.Adapter<BucketsAdapter.MyViewHo
     public void onBindViewHolder(MyViewHolder holder, int position) {
         bucketNames.get(position);
         holder.title.setText(bucketNames.get(position));
-        Glide.with(context).load("file://"+bitmapList.get(position)).override(300,300).centerCrop().into(holder.thumbnail);
+        Glide.with(context).load("file://"+bitmapList.get(position)).apply(new RequestOptions().override(300,300).centerCrop()).into(holder.thumbnail);
     }
 
     @Override

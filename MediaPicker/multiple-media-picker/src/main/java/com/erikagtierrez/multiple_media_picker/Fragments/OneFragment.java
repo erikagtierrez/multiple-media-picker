@@ -5,7 +5,6 @@ import android.content.Intent;
 import android.database.Cursor;
 import android.os.Bundle;
 import android.provider.MediaStore;
-import android.support.v4.app.Fragment;
 import android.support.v7.widget.DefaultItemAnimator;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.RecyclerView;
@@ -24,8 +23,8 @@ import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.List;
 
-public class OneFragment extends Fragment{
-    private static RecyclerView recyclerView;
+public class OneFragment extends android.support.v4.app.Fragment {
+    private RecyclerView recyclerView;
     private BucketsAdapter mAdapter;
     private final String[] projection = new String[]{ MediaStore.Images.Media.BUCKET_DISPLAY_NAME, MediaStore.Images.Media.DATA };
     private final String[] projection2 = new String[]{MediaStore.Images.Media.DISPLAY_NAME,MediaStore.Images.Media.DATA };
@@ -49,7 +48,7 @@ public class OneFragment extends Fragment{
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View v= inflater.inflate(R.layout.fragment_one, container, false);
-        recyclerView = (RecyclerView) v.findViewById(R.id.recycler_view);
+        recyclerView = v.findViewById(R.id.recycler_view);
         populateRecyclerView();
         return v;
     }

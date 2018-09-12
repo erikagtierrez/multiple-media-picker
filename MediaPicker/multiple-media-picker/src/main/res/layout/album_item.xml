@@ -1,13 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    tools:ignore="UseCompoundDrawables">
 
     <ImageView
         android:id="@+id/image"
         android:layout_width="130dp"
-        android:layout_height="130dp" />
+        android:layout_height="130dp"
+        android:contentDescription="@string/image" />
 
     <TextView
         android:id="@+id/title"
@@ -17,6 +20,6 @@
         android:fontFamily="sans-serif"
         android:layout_marginTop="5dp"
         android:gravity="center"
-        android:textSize="14dp" />
+        android:textSize="14sp" />
 
 </LinearLayout>

@@ -1,11 +1,11 @@
 package com.erikagtierrez.multiple_media_picker.Fragments;
 
+import android.app.Fragment;
 import android.content.Context;
 import android.content.Intent;
 import android.database.Cursor;
 import android.os.Bundle;
 import android.provider.MediaStore;
-import android.support.v4.app.Fragment;
 import android.support.v7.widget.DefaultItemAnimator;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.RecyclerView;
@@ -24,8 +24,8 @@ import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.List;
 
-public class TwoFragment extends Fragment{
-    private static RecyclerView recyclerView;
+public class TwoFragment extends android.support.v4.app.Fragment {
+    private RecyclerView recyclerView;
     private BucketsAdapter mAdapter;
     private List<String> bucketNames= new ArrayList<>();
     private List<String> bitmapList=new ArrayList<>();
@@ -50,7 +50,7 @@ public class TwoFragment extends Fragment{
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View v= inflater.inflate(R.layout.fragment_one, container, false);
-        recyclerView = (RecyclerView) v.findViewById(R.id.recycler_view);
+        recyclerView = v.findViewById(R.id.recycler_view);
         populateRecyclerView();
         return v;
     }

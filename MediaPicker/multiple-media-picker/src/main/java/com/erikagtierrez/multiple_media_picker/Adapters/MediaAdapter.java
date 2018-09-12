@@ -8,7 +8,9 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 
+import com.bumptech.glide.request.RequestOptions;
 import com.erikagtierrez.multiple_media_picker.R;
+import static com.bumptech.glide.load.resource.drawable.DrawableTransitionOptions.withCrossFade;
 import com.bumptech.glide.Glide;
 
 import java.util.List;
@@ -43,7 +45,7 @@ public class MediaAdapter extends RecyclerView.Adapter<MediaAdapter.MyViewHolder
 
     @Override
     public void onBindViewHolder(MyViewHolder holder, int position) {
-        Glide.with(context).load("file://"+bitmapList.get(position)).override(153,160).crossFade().centerCrop().dontAnimate().skipMemoryCache(true).into(holder.thumbnail);
+        Glide.with(context).load("file://"+bitmapList.get(position)).apply(new RequestOptions().override(153,160).centerCrop().dontAnimate().skipMemoryCache(true)).transition(withCrossFade()).into(holder.thumbnail);
         if(selected.get(position).equals(true)){
             holder.check.setVisibility(View.VISIBLE);
             holder.check.setAlpha(150);

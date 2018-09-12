@@ -6,4 +6,8 @@
     <string name="camera">Camera</string>
     <string name="select">selectall</string>
     <string name="action_settings">Settings</string>
+    <string name="image">image</string>
+    <string name="videos">Videos</string>
+    <string name="image1">image1</string>
+    <string name="image2">image2</string>
 </resources>

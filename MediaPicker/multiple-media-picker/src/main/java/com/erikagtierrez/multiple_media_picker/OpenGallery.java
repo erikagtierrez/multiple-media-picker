@@ -15,7 +15,6 @@ import android.view.WindowManager;
 import com.erikagtierrez.multiple_media_picker.Adapters.MediaAdapter;
 import com.erikagtierrez.multiple_media_picker.Fragments.OneFragment;
 import com.erikagtierrez.multiple_media_picker.Fragments.TwoFragment;
-import com.erikagtierrez.multiple_media_picker.R;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -34,9 +33,9 @@ public class OpenGallery extends AppCompatActivity {
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
                 WindowManager.LayoutParams.FLAG_FULLSCREEN);
         setContentView(R.layout.activity_open_gallery);
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
+        FloatingActionButton fab = findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -54,7 +53,7 @@ public class OpenGallery extends AppCompatActivity {
                 onBackPressed();
             }
         });
-        recyclerView = (RecyclerView) findViewById(R.id.recycler_view);
+        recyclerView = findViewById(R.id.recycler_view);
         parent = getIntent().getExtras().getString("FROM");
         mediaList.clear();
         selected.clear();
